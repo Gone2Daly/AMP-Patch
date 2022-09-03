@@ -5700,7 +5700,7 @@ country_event = {
 			}
 			any_owned = {
 				limit = {
-					region = AMP_alaska_state
+					region = USA_1
 				}
 				secede_province = THIS
 				change_owner = THIS
@@ -5709,7 +5709,7 @@ country_event = {
 		}
 		any_owned = {
 			limit = {
-				region = AMP_alaska_state
+				region = USA_1
 			}
 			secede_province = FROM
 			change_owner = FROM

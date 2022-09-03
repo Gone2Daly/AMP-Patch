@@ -19223,7 +19223,7 @@ gain_state_alaska_all = {
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 2 # annex if you want their last state
 		any_owned_province = {
-			region = AMP_alaska_state
+			region = USA_1
 		}
 
 		
