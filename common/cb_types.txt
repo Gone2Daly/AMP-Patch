@@ -19242,6 +19242,7 @@ gain_state_alaska_all = {
 		country_event = 100361
 	}
 }
+
 #HFM CB
 free_allied_cores = {
 	sprite_index = 15
