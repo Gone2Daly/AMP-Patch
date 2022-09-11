@@ -1,0 +1,169 @@
+political_decisions = {
+   givemoney_on = { 
+	alert = no potential = { not = { has_country_flag = givemoney } } 
+	allow = { ai = no } 
+	effect = { set_country_flag = givemoney } 
+	}
+   givemoney_off = {
+	alert = yes potential = { has_country_flag = givemoney } 
+	allow = { ai = no } 
+	effect = { clr_country_flag = givemoney } 
+	}
+	
+	
+
+concede_elsass = {
+	potential = {
+		tag = NGF
+		NOT = {
+			has_country_flag = conceded_elsass
+			}
+		}
+	allow = {
+		prestige = 75
+		war = no
+	}
+	effect = {
+		410 = {
+			remove_core = GER
+		}
+		409 = {
+			remove_core = GER
+		}
+		412 = {
+			remove_core = GER
+		}
+		prestige = -75
+		any_pop = {
+			militancy = 3
+			}
+		set_country_flag = conceded_elsass
+		}
+	ai_will_do = {
+		factor = -1
+	}
+	}
+	
+	russia_rename_sakhalin = {
+		potential = {
+			tag = RUS
+			NOT = {
+				has_global_flag = russia_has_renamed_sakhalin
+			}
+			owns = 1086
+			owns = 1087
+		}
+		allow = {
+		}
+		effect = {
+			1087 = {
+				change_province_name = "��������"
+			}
+			prestige = 5
+			set_global_flag = russia_has_renamed_sakhalin
+			clr_global_flag = japan_has_renamed_sakhalin
+		}
+	}
+	
+	japan_rename_sakhalin = {
+		potential = {
+			tag = JAP
+			NOT = {
+				has_global_flag = japan_has_renamed_sakhalin
+			}
+			owns = 1086
+			owns = 1087
+		}
+		allow = {
+		}
+		effect = {
+			1087 = {
+				change_province_name = "�������"
+			}
+			prestige = 5
+			set_global_flag = japan_has_renamed_sakhalin
+			clr_global_flag = russia_has_renamed_sakhalin
+		}
+	}
+	
+	russia_rename_kuriles = {
+		potential = {
+			tag = RUS
+			NOT = {
+				has_global_flag = russia_has_renamed_kuriles
+			}
+			owns = 1088
+			owns = 1089
+		}
+		allow = {
+		}
+		effect = {
+			1088 = {
+				change_province_name = "���������"
+			}
+			1089 = {
+				change_province_name = "������"
+			}
+			prestige = 5
+			set_global_flag = russia_has_renamed_kuriles
+			clr_global_flag = japan_has_renamed_kuriles
+		}
+	}
+	
+	japan_rename_kuriles = {
+		potential = {
+			tag = JAP
+			NOT = {
+				has_global_flag = japan_has_renamed_kuriles
+			}
+			owns = 1088
+			owns = 1089
+		}
+		allow = {
+		}
+		effect = {
+			1088 = {
+				change_province_name = "����������-��"
+			}
+			1089 = {
+				change_province_name = "�������"
+			}
+			prestige = 5
+			set_global_flag = japan_has_renamed_kuriles
+			clr_global_flag = russia_has_renamed_kuriles
+		}
+	}
+	
+	
+	
+	move_capital_to_tokyo = {
+		potential = {
+			tag = JAP
+			owns = 1649 
+			capital = 1657
+		}
+		
+		allow = {
+			civilized = yes
+		}
+		
+		effect = {
+			capital = 1649
+			prestige = 5
+			1649 = {
+				change_province_name = "�����"
+				life_rating = 10
+			}
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+				}
+				consciousness = 3
+				militancy = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
